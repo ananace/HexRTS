@@ -1,0 +1,15 @@
+PROJECT(HexRTS)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+
+OPTION(Hex_TESTS "Build and runs basic tests" OFF)
+
+IF (NOT WIN32)
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wextra -pedantic")
+ENDIF()
+
+ADD_SUBDIRECTORY(Source)
+
+IF (${Hex_TESTS})
+	ADD_SUBDIRECTORY(Tests)
+ENDIF()
+
