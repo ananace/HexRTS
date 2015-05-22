@@ -1,0 +1,49 @@
+Synopsis
+========
+
+A 2.5D hex-tile based RTS - Civilization V like.
+
+
+
+Technologies
+============
+
+- CMake
+- SFML
+- Scripting (Angelscript / Lua)
+
+
+Game Mechanics
+==============
+
+
+Collecting Resources
+--------------------
+
+Constructing Cities
+-------------------
+
+Research
+--------
+
+
+
+Game Objects
+============
+
+
+Cities
+------
+
+A city / 'outposts' 
+
+Resources
+---------
+
+- Food
+- Ore
+- Stone
+- Wood
+
+
+
