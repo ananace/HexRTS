@@ -27,8 +27,11 @@ function love.draw()
 	-- [[
 	for Y=0,5 do
 		for X=1,10,2 do
-			drawHex(X + 1, Y, 1)
-			drawHex(X, Y, 1)
+			local sprite = 1
+			if X + Y > 8 then sprite = 4 end
+
+			drawHex(X + 1, Y, sprite)
+			drawHex(X, Y, sprite)
 
 			drawHex(X, Y, 0)
 			drawHex(X + 1, Y, 0)
@@ -74,7 +77,7 @@ function love.draw()
 
 	
 	drawHex(2, 1, 2)
-	drawHex(3, 1, 3)
+	drawHex(6, 3, 3)
 
 	love.graphics.pop()
 end

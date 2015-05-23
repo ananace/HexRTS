@@ -1,7 +1,7 @@
 local hextiles = nil
 
 function love.load()
-	hextiles = love.graphics.newImage("hextiles.png");
+	hextiles = love.graphics.newImage("Hextiles.png");
 end
 
 function drawHex(x, y, id)
@@ -13,6 +13,17 @@ function drawHex(x, y, id)
 end
 
 function love.draw()
+	
+	for Y=1,10 do
+                for X=1,20,2 do
+                        drawHex(X + 1, Y, 3)
+                        drawHex(X, Y, 3)
+
+                        drawHex(X, Y, 1)
+                        drawHex(X + 1, Y, 1)
+                end
+        end
+	--[[
 	drawHex(1, 0, 3)
     drawHex(2, 0, 3)
     drawHex(3, 0, 5)
@@ -38,4 +49,5 @@ function love.draw()
     drawHex(2, 2, 1)
     drawHex(3, 2, 1)
     drawHex(4, 2, 1)
+	]]
 end
